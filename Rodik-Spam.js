@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Rodik spam
 // @namespace   Rodik spaming
-// @version      3.3
+// @version     3.2.1
 // @match       https://www.twitch.tv/r0dik*
 // @grant       none
 // @updateURL   https://github.com/Traycken/JS-Script/raw/main/Rodik-Spam.js
@@ -9,7 +9,6 @@
 // ==/UserScript==
 
 (function() {
-    // test update
     'use strict';
 
     // Charger les keyBindings depuis localStorage ou utiliser les valeurs par défaut
