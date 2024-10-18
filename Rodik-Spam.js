@@ -4,8 +4,8 @@
 // @version      3.2
 // @match       https://www.twitch.tv/r0dik*
 // @grant       none
-// @updateURL   https://raw.githubusercontent.com/Traycken/JS-Script/refs/heads/main/Rodik%20Spam?token=GHSAT0AAAAAACR7YWII7GFD4UVT5LC5XUDQZYSLVCA
-// @downloadURL https://github.com/pixeltris/TwitchAdSolutions/raw/master/video-swap-new/video-swap-new.user.js
+// @updateURL   https://raw.githubusercontent.com/Traycken/JS-Script/refs/heads/main/Rodik-Spam.js?token=GHSAT0AAAAAACR7YWIIIJWX5Y6XUBVNPZDCZYSLYCQ
+// @downloadURL https://raw.githubusercontent.com/Traycken/JS-Script/refs/heads/main/Rodik-Spam.js?token=GHSAT0AAAAAACR7YWIIIJWX5Y6XUBVNPZDCZYSLYCQ
 // ==/UserScript==
 
 (function() {
