@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Rodik spam
 // @namespace   Rodik spaming
-// @version     3.2.1
+// @version     3.2.2
 // @match       https://www.twitch.tv/r0dik*
 // @grant       none
 // @updateURL   https://github.com/Traycken/JS-Script/raw/main/Rodik-Spam.js
@@ -181,12 +181,56 @@
             <head>
                 <title>Modifier les KeyBindings</title>
                 <style>
-                    body { font-family: Arial, sans-serif; padding: 20px; }
-                    table { width: 100%; border-collapse: collapse; }
-                    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-                    th { background-color: #f2f2f2; }
-                    input { width: 100%; box-sizing: border-box; }
-                    button { margin-top: 10px; padding: 10px 15px; }
+                    body {
+                        font-family: Arial, sans-serif;
+                        padding: 20px;
+                        background-color: #1e1e1e; /* Fond sombre */
+                        color: #c7c7c7; /* Texte clair */
+                    }
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-top: 20px;
+                    }
+                    th, td {
+                        border: 1px solid #555; /* Bordures sombres */
+                        padding: 8px;
+                        text-align: left;
+                    }
+                    th {
+                        background-color: #2a2a2a; /* En-têtes de table sombre */
+                        color: #fff; /* Texte blanc pour en-têtes */
+                    }
+                    td {
+                        background-color: #333; /* Cellules de table sombres */
+                    }
+                    input {
+                        width: 100%;
+                        box-sizing: border-box;
+                        background-color: #444; /* Fond d'input sombre */
+                        border: 1px solid #555; /* Bordure d'input sombre */
+                        color: #fff; /* Texte clair */
+                        padding: 6px;
+                    }
+                    button {
+                        margin-top: 10px;
+                        padding: 10px 15px;
+                        background-color: #9146FF; /* Bouton violet foncé */
+                        border: 1px solid #772CE8; /* Bordure de bouton */
+                        color: #fff; /* Texte blanc */
+                        cursor: pointer;
+                        transition: background-color 0.3s, border-color 0.3s;
+                    }
+                    button:hover {
+                        background-color: #772CE8; /* Couleur plus claire au survol */
+                    }
+                    button:active {
+                        background-color: #5e21b5; /* Couleur au clic */
+                    }
+                    #addButton, #saveButton {
+                        display: inline-block;
+                        margin-right: 10px;
+                    }
                 </style>
             </head>
             <body>
@@ -255,6 +299,7 @@
             });
         });
     }
+
 
     // Fonction pour détecter l'appui sur la touche
     function handleKeyPress(event) {
