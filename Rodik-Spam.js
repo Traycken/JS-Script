@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Rodik spam
 // @namespace   Rodik spaming
-// @version     3.3.1
+// @version     3.3.2
 // @match       https://www.twitch.tv/r0dik*
 // @grant       none
 // @updateURL   https://github.com/Traycken/JS-Script/raw/main/Rodik-Spam.js
@@ -34,25 +34,23 @@
     let MaxRequiredPoints = localStorage.getItem('MaxRequiredPoints') || 10; // Valeur par défaut si aucune valeur stockée
     let SpamWait = localStorage.getItem('SpamWait') || 300; // Valeur par défaut si aucune valeur stockée
 
-    // Fonction asynchrone pour attendre l'apparition d'un élément avec vérification périodique
-    function waitForElement(selector, timeout = 500, interval = 10) {
+    // Fonction asynchrone pour attendre l'apparition d'un élément
+    function waitForElement(selector, timeout = 500) {
         return new Promise((resolve, reject) => {
-            const startTime = Date.now();
 
-            // Fonction pour vérifier l'existence de l'élément
-            const checkExistence = () => {
+            const observer = new MutationObserver((mutationsList, observer) => {
                 const element = document.querySelector(selector);
                 if (element) {
-                    clearInterval(checkInterval);
+                    observer.disconnect();
                     resolve(element);
-                } else if (Date.now() - startTime > timeout) {
-                    clearInterval(checkInterval);
-                    reject(`Timeout: Element ${selector} not found`);
                 }
-            };
+            });
+            observer.observe(document.body, { childList: true, subtree: true });
 
-            // Vérifier l'élément toutes les 50 ms (ou une valeur personnalisée)
-            const checkInterval = setInterval(checkExistence, interval);
+            setTimeout(() => {
+                observer.disconnect();
+                reject(`Timeout: Element ${selector} not found`);
+            }, timeout);
         });
     }
 
