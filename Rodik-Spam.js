@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Rodik spam
 // @namespace   Rodik spaming
-// @version     3.3
+// @version     3.3.1
 // @match       https://www.twitch.tv/r0dik*
 // @grant       none
 // @updateURL   https://github.com/Traycken/JS-Script/raw/main/Rodik-Spam.js
@@ -35,7 +35,7 @@
     let SpamWait = localStorage.getItem('SpamWait') || 300; // Valeur par défaut si aucune valeur stockée
 
     // Fonction asynchrone pour attendre l'apparition d'un élément avec vérification périodique
-    function waitForElement(selector, timeout = 500, interval = 1) {
+    function waitForElement(selector, timeout = 500, interval = 10) {
         return new Promise((resolve, reject) => {
             const startTime = Date.now();
 
