@@ -4,6 +4,7 @@
 // @version     3.3.2
 // @match       https://www.twitch.tv/r0dik*
 // @grant       none
+// @author      Traycken
 // @updateURL   https://github.com/Traycken/JS-Script/raw/main/Rodik-Spam.js
 // @downloadURL https://github.com/Traycken/JS-Script/raw/main/Rodik-Spam.js
 // ==/UserScript==
