@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Rodik spam
 // @namespace   Rodik spaming
-// @version     3.3.2
+// @version     3.3.3
 // @match       https://www.twitch.tv/r0dik*
 // @grant       none
 // @author      Traycken
@@ -111,7 +111,7 @@
                 await waitForElement('#channel-points-reward-center-body');
 
                 // Attendre et cliquer sur le troisième bouton
-                const button3 = document.querySelector('button.ScCoreButton-sc-ocjdkq-0.dJEfYL p.CoreText-sc-1txzju1-0');
+                const button3 = document.querySelector('button.ScCoreButton-sc-ocjdkq-0.khjbBN p.CoreText-sc-1txzju1-0');
 
                 // Récupérer la valeur de RequiredPoints
                 const priceElement = document.querySelector('div[data-test-selector="RequiredPoints"]').previousSibling;
@@ -129,7 +129,7 @@
                 }
 
                 // Fermer la fenêtre en cliquant sur le bouton de fermeture
-                const button4 = await waitForElement('button.ScCoreButton-sc-ocjdkq-0.bmPBgZ.ScButtonIcon-sc-9yap0r-0.eSFFfM[aria-label="Fermer"]');
+                const button4 = await waitForElement('button.ScCoreButton-sc-ocjdkq-0.kIbAir.ScButtonIcon-sc-9yap0r-0.eSFFfM[aria-label="Fermer"]');
                 simulateClick(button4);
             }
         } catch (error) {
