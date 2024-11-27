@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Rodik spam
 // @namespace   Rodik spaming
-// @version     3.3.3
+// @version     3.3.4
 // @match       https://www.twitch.tv/r0dik*
 // @grant       none
 // @author      Traycken
@@ -14,15 +14,25 @@
 
     // Charger les keyBindings depuis localStorage ou utiliser les valeurs par défaut
     const defaultBindings = {
-        '1': 'viens',
-        '2': 'tsap',
+        '1': 't1bz',
+        '2': 'viens',
         '3': 'huhu',
         '4': 'tsin',
         '5': 'poukwa',
         '6': 'ccomb',
         '7': 'bokou+',
         '8': 'genou',
-        '9': 'ticubi'
+        '9': 'bj',
+        '100': 'ya',
+        '110': 'ttilt',
+        '120': 'mort.',
+        '130': 'vtff.',
+        '140': 'ohhhh',
+        '150': 'bienvenue',
+        '160': 'ff',
+        '170': 'cava',
+        '180': 'pitie',
+        '190': 'tvemab'
     };
     let keyBindings = JSON.parse(localStorage.getItem('keyBindings')) || defaultBindings;
 
